@@ -15,10 +15,11 @@ arrowRestSum(0); // => 0
 
 const arrowRestSum=(...num)=>{
  let newArray=num.reduce((accum,number)=>{
-   accum+=number
-  return accum})
-  return newArray;
-}
+   accum+=number;
+   return accum;
+  });
+   return newArray;
+};
 
 
 console.log(arrowRestSum(3,5,6)); // => 14
