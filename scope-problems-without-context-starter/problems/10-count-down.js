@@ -28,7 +28,20 @@ Example 4:
 
 ***********************************************************************/
 
-// your code here
+function countDownTimer(n){
+  if ( n === 0 ) {
+    return "Happy New Year!";
+  }
+    return function (){
+        n--
+        if ( n === 0 ) {
+          return'Happy New Year!';
+        } 
+    };   
+};
+
+oneDay = countDownTimer();
+oneDay(0);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

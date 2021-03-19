@@ -17,8 +17,24 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
+function sandwichMaker (){
+  let sandwichIngredients = [];
+  return function (ingredient){
+      sandwichIngredients.push(ingredient)
+      let finalResponse = "One sandwich with tomato";
+          for (let i = 0; i < sandwichIngredients.length; i++){
+              let currentIngredient = sandwichIngredients[i];
 
+              finalResponse += " and " + currentIngredient;
+          };
+              return finalResponse;
+  };
+ };
 
+let sandwich = sandwichMaker();
+console.log(sandwich("cheese"));
+console.log(sandwich("lettuce"));
+console.log(sandwich("pastrami"));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
